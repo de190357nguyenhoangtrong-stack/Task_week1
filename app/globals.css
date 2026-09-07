@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 25% 96%; /* #F7F5F1 */
+    --foreground: 0 0% 14%; /* #242424 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 0 0% 14%; /* #242424 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 14%;
+    --primary: 0 0% 14%; /* #242424 */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 33 4% 42%; /* #6F6B66 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 40 30% 95%; /* #F5F1EA */
+    --muted-foreground: 33 4% 42%; /* #6F6B66 */
+    --accent: 32 23% 57%; /* #A9937A */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 14%; /* Will use rgba(36,36,36,0.12) */
+    --input: 45 10% 85%;
+    --ring: 0 0% 14%; /* #242424 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 14%;
+    --foreground: 39 24% 95%;
+    --card: 0 0% 14%;
+    --card-foreground: 39 24% 95%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 39 24% 95%;
+    --primary: 39 24% 95%;
+    --primary-foreground: 0 0% 14%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 39 24% 95%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 32 23% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 32 23% 57%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgba(30, 30, 30, 0.10);
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-[10px] bg-[#242424] px-8 py-4 text-sm font-medium text-white shadow-sm hover:bg-[#151515] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:scale-[1.025] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring tracking-normal;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-[10px] bg-white px-8 py-4 text-sm font-medium text-[#242424] shadow-sm hover:bg-gray-50 transition-all duration-300 ease-out hover:-translate-y-[2px] hover:scale-[1.025] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring tracking-normal;
+}
+
+.glass-panel {
+  @apply bg-[#F5F2ED]/90 backdrop-blur-md border border-[rgba(30,30,30,0.10)] shadow-sm rounded-[16px];
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(36, 36, 36, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(36, 36, 36, 0.4);
+}
